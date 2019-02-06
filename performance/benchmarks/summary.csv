@@ -1,0 +1,17 @@
+Scenario Name,Heap Size,Concurrent Users,Message Size (Bytes),Back-end Service Delay (ms),Label,# Samples,Error Count,Error %,Throughput (Requests/sec),Average Response Time (ms),Standard Deviation of Response Time (ms),Minimum Response Time (ms),Maximum Response Time (ms),75th Percentile of Response Time (ms),90th Percentile of Response Time (ms),95th Percentile of Response Time (ms),98th Percentile of Response Time (ms),99th Percentile of Response Time (ms),99.9th Percentile of Response Time (ms),Received (KB/sec),Sent (KB/sec),Back-end Server GC Throughput (%),Back-end Server Memory Footprint (M),Average Back-end Server Memory Footprint After Full GC (M),Standard Deviation of Back-end Server Memory Footprint After Full GC (M),Back-end Server Load Average - Last 1 minute,Back-end Server Load Average - Last 5 minutes,Back-end Server Load Average - Last 15 minutes
+HTTPS echo service,4G,100,50,0,HTTP Request,1991413,0,0,33191.88,2.9,3.55,0,219,3,3,4,5,8,60,4700.02,7163.48,99.92,4067.5,,,1.62,1.02,0.61
+HTTPS echo service,4G,100,50,30,HTTP Request,195861,0,0,3265.98,30.56,1.69,30,235,31,31,31,31,31,71,462.47,704.87,99.96,3925.5,,,0.15,0.61,0.52
+HTTPS echo service,4G,100,1024,0,HTTP Request,1589265,0,0,26526.66,3.65,3.78,0,233,4,4,5,7,10,61,29039.43,31008.21,99.91,4084.5,,,2.33,1.19,0.74
+HTTPS echo service,4G,100,1024,30,HTTP Request,195256,0,0,3255.84,30.64,1.83,30,80,31,31,31,31,31,69,3564.25,3805.9,99.95,4056,,,0.24,0.76,0.65
+HTTPS echo service,4G,200,50,0,HTTP Request,2025838,0,0,33784.24,5.54,9.13,0,515,6,7,9,17,40,137,4783.9,7258.33,99.88,4050,49.482,0,1.57,0.94,0.55
+HTTPS echo service,4G,200,50,30,HTTP Request,393740,0,0,6564.52,30.42,2.41,30,82,31,31,31,31,31,74,929.55,1410.35,99.92,4040,50.152,0,0.55,0.68,0.51
+HTTPS echo service,4G,200,1024,0,HTTP Request,1583068,0,0,26401.63,7.12,10.68,0,376,8,9,12,22,44,168,28902.56,30836.28,99.85,4076,49.935,0,1.42,1.01,0.67
+HTTPS echo service,4G,200,1024,30,HTTP Request,393100,0,0,6555.27,30.46,2.31,30,81,31,31,31,31,31,72,7176.23,7656.35,99.91,4045,49.697,0,0.59,0.79,0.64
+HTTP echo service,4G,100,50,0,HTTP Request,2447666,0,0,40833.22,2.33,3.34,0,230,3,3,3,4,6,58,5782.05,8812.64,99.94,4058,,,0.91,0.49,0.23
+HTTP echo service,4G,100,50,30,HTTP Request,195983,0,0,3269.16,30.54,1.8,30,236,31,31,31,31,31,69,462.92,705.55,99.98,3925.5,,,0.06,0.33,0.23
+HTTP echo service,4G,100,1024,0,HTTP Request,2037063,0,0,33986.74,2.8,3.62,0,207,3,3,4,5,7,59,37206.18,39728.64,99.94,4056.5,,,1.17,0.75,0.41
+HTTP echo service,4G,100,1024,30,HTTP Request,196004,0,0,3268.86,30.54,1.56,30,83,31,31,31,31,31,49,3578.51,3821.12,99.98,3925.5,,,0.28,0.55,0.40
+HTTP echo service,4G,200,50,0,HTTP Request,2384230,0,0,39763.68,4.5,8.52,0,358,5,5,7,14,32,135,5630.6,8542.98,99.91,4025,,,0.66,0.37,0.18
+HTTP echo service,4G,200,50,30,HTTP Request,394023,0,0,6573.62,30.39,2.44,30,84,30,31,31,31,31,77,930.84,1412.3,99.95,3925.5,,,0.46,0.43,0.25
+HTTP echo service,4G,200,1024,0,HTTP Request,1984582,0,0,33100.09,5.49,8.28,0,522,6,7,8,14,31,126,36235.55,38659.87,99.91,4020.5,,,0.64,0.54,0.33
+HTTP echo service,4G,200,1024,30,HTTP Request,394124,0,0,6571.91,30.38,2.26,30,86,30,31,31,31,31,74,7194.44,7675.79,99.95,3925.5,,,0.23,0.43,0.33
