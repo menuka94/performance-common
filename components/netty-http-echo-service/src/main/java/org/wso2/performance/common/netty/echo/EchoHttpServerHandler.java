@@ -19,12 +19,9 @@ import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
-import io.netty.handler.codec.http.DefaultFullHttpResponse;
-import io.netty.handler.codec.http.FullHttpRequest;
-import io.netty.handler.codec.http.FullHttpResponse;
-import io.netty.handler.codec.http.HttpHeaderNames;
-import io.netty.handler.codec.http.HttpHeaderValues;
-import io.netty.handler.codec.http.HttpUtil;
+import io.netty.handler.codec.http.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static io.netty.handler.codec.http.HttpResponseStatus.OK;
 import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
@@ -35,6 +32,8 @@ import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
 @Sharable
 public class EchoHttpServerHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(EchoHttpServerHandler.class);
+
     private long sleepTime;
 
     EchoHttpServerHandler(long sleepTime) {
@@ -43,11 +42,13 @@ public class EchoHttpServerHandler extends SimpleChannelInboundHandler<FullHttpR
 
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) {
+        LOGGER.info(this.getClass().getSimpleName() + ".channelReadComplete()");
         ctx.flush();
     }
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, FullHttpRequest msg) {
+        LOGGER.info(this.getClass().getSimpleName() + ".channelRead0()");
         if (sleepTime > 0) {
             try {
                 Thread.sleep(sleepTime);
